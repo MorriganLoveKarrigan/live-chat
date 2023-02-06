@@ -1,0 +1,52 @@
+.row {
+  display: flex;
+
+  &.me {
+    flex-direction: row-reverse;
+  }
+
+  &.another {
+    margin-right: auto;
+  }
+
+  .message {
+    width: fit-content;
+    background-color: #415A77;
+    display: flex;
+    padding: 10px 20px 10px 5px;
+    border-radius: 10px 20px;
+    margin: 10px 10px;
+
+    &--image img {
+      height: 64px;
+      width: 64px;
+      border-radius: 100%;
+    }
+
+    &--info {
+      display: flex;
+      margin-left: 10px;
+
+      p {
+        color: #E0E1DD;
+        font-size: 16px;
+        margin-right: 10px;
+      }
+
+      div > span {
+        font-size: 10px;
+        margin-left: 5px;
+        color: #E0E1DD;
+      }
+    }
+
+    &--text {
+      color: #778DA9;
+      font-size: 14px;
+      padding: 10px;
+      text-align: left;
+
+    }
+
+  }
+}

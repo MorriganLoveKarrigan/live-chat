@@ -1,0 +1,14 @@
+.login-page {
+  height: calc(100vh - 20vh);
+  margin-top: auto;
+  &--block {
+    width: fit-content;
+    &--button {
+      color: #E0E1DD !important;
+      padding: 10px 20px !important;
+      &:hover{
+        border:1px solid #E0E1DD !important;
+      }
+    }
+  }
+}
