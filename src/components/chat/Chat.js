@@ -25,7 +25,6 @@ const Chat = () => {
         });
         setValue("");
         setLoading(false)
-
     }
 
     async function handlerKeyDown(event) {
