@@ -11,6 +11,7 @@ const Message = () => {
     console.log(messages)
     const unsub = () => onSnapshot(q, (snapshot) => {
         let arr = []
+        console.log('in unsub fn 14')
         console.log(snapshot)
         snapshot.forEach((doc) => {
             arr.push({...doc.data(), id: doc.id})
