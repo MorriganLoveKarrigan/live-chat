@@ -8,13 +8,17 @@ import "./message.scss"
 const Message = () => {
     const [messages, setMessages] = useState([])
     const q = query(collection(firestore, "messages"), orderBy('timestamp'))
-
+    console.log(messages)
     const unsub = () => onSnapshot(q, (snapshot) => {
-        let messages = []
+        let arr = []
+        console.log(snapshot)
         snapshot.forEach((doc) => {
-            messages.push({...doc.data(), id: doc.id})
+            arr.push({...doc.data(), id: doc.id})
         })
-        setMessages(messages)
+        console.log(messages,'before set')
+        setMessages(arr)
+        console.log(messages,'after set')
+
     })
 
     useEffect(() => {

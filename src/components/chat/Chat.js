@@ -12,10 +12,12 @@ const Chat = () => {
     const [user] = useAuthState(auth)
     const [value, setValue] = useState('')
     const [loading, setLoading] = useState(false)
+    console.log(user)
 
     async function sendMessage() {
         if (!value) return
         setLoading(true)
+        console.log(value)
         await addDoc(collection(firestore, "messages"), {
             text: value.trim(),
             userName: user.displayName,
