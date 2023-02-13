@@ -9,7 +9,7 @@ const Message = () => {
     const [messages, setMessages] = useState([])
     const q = query(collection(firestore, "messages"), orderBy('timestamp'))
     console.log(messages)
-    const unsub = () => onSnapshot(q, (snapshot) => {
+    const unsub = async() => await onSnapshot(q, (snapshot) => {
         let arr = []
         console.log('in unsub fn 14')
         console.log(snapshot)
